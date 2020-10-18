@@ -9,5 +9,5 @@ def hello_world():
 
 
 @app.route('/help')
-def hello_world():
-    return 'Hello from help!'
+def hello_help():
+    return 'Hello from help1!'

@@ -7,8 +7,6 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello World!'
 
-if
-qw=10
 
 @app.route('/help')
 def hello_help():

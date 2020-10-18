@@ -12,12 +12,11 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  
- lint:
- runs-on: ubuntu-latest
+  lint:
+    runs-on: ubuntu-latest
     steps:
- - uses: actions/checkout@v2
- - uses: cclauss/Find-Python-syntax-errors-action@master
+    - uses: actions/checkout@v2
+    - uses: cclauss/Find-Python-syntax-errors-action@master
           
           
   check_puthon_app:

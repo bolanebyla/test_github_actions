@@ -61,9 +61,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: 22
         script: |
-          whoami
-          mkdir hello2
-          if [-f test_github_actions]; then git clonehttps://github.com/bolanebyla/test_github_actions.git; fi
+          if ! [ -d test_github_actions]; then git clone https://github.com/bolanebyla/test_github_actions.git; fi
           cd test_github_actions
           git pull
           ./run.sh

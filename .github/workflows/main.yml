@@ -83,7 +83,9 @@ jobs:
     - name: docker status
       run: | 
         cd test_github_actions
+        sleep 3
         docker ps -a
+        
           
       
 

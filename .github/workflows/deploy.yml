@@ -59,7 +59,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        port: 22
+        port: 222
     
         script: |
           if ! [ -d test_github_actions ]; then git clone https://github.com/bolanebyla/test_github_actions.git; fi

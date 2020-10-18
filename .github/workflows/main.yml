@@ -63,22 +63,21 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: 22
     
-    - name: Clone and pull from git
-      run: |
-        if ! [ -d test_github_actions ]; then git clone https://github.com/bolanebyla/test_github_actions.git; fi
-        cd test_github_actions
-        git pull
+        script: |
+          if ! [ -d test_github_actions ]; then git clone https://github.com/bolanebyla/test_github_actions.git; fi
+          cd test_github_actions
+          git pull
 
-        cd test_github_actions
-        ls -ltr
-    
-        cd test_github_actions
-        docker-compose build 
-        docker-compose up -d
-    
-        cd test_github_actions
-        sleep 3
-        docker ps -a
+          cd test_github_actions
+          ls -ltr
+
+          cd test_github_actions
+          docker-compose build 
+          docker-compose up -d
+
+          cd test_github_actions
+          sleep 3
+          docker ps -a
         
           
       

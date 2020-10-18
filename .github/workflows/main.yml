@@ -77,7 +77,8 @@ jobs:
     - name: docker-compose build and up
       run: | 
         cd test_github_actions
-        docker-compose build up -d
+        docker-compose build 
+        docker-compose up -d
     
     - name: docker status
       run: | 

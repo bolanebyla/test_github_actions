@@ -70,13 +70,19 @@ jobs:
         git pull
     
     - name: Check files
-      run: ls -ltr
+      run: | 
+        cd test_github_actions
+        ls -ltr
     
     - name: docker-compose build and up
-      run: docker-compose build up -d
+      run: | 
+        cd test_github_actions
+        docker-compose build up -d
     
     - name: docker status
-      run: docker ps -a
+      run: | 
+        cd test_github_actions
+        docker ps -a
           
       
 

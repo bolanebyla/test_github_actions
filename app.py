@@ -10,4 +10,4 @@ def hello_world():
 
 @app.route('/help')
 def hello_world():
-    return 'Hello from help!'
+    return 'Hello from help1!'

@@ -63,5 +63,9 @@ jobs:
         script: |
           whoami
           mkdir hello2
+          if [-f test_github_actions]; then git clonehttps://github.com/bolanebyla/test_github_actions.git; fi
+          cd test_github_actions
+          git pull
+          ./run.sh
       
 

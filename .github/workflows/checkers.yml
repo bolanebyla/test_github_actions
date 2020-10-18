@@ -45,34 +45,6 @@ jobs:
         ls -ltr
         docker-compose build 
 
-
-  Remote-ssh-command:
-    name: Remote-ssh-command
-    runs-on: ubuntu-latest
-    
-    needs: [Python-syntax-checker, Docker-compose-build-checker]
-    
-    steps:
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: 22
-    
-        script: |
-          if ! [ -d test_github_actions ]; then git clone https://github.com/bolanebyla/test_github_actions.git; fi
-          cd test_github_actions
-          git pull
-
-          ls -ltr
-
-          docker-compose build 
-          docker-compose up -d
-
-          sleep 3
-          docker ps -a
         
           
       

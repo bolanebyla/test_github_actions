@@ -64,6 +64,9 @@ jobs:
           if ! [ -d test_github_actions ]; then git clone https://github.com/bolanebyla/test_github_actions.git; fi
           cd test_github_actions
           git pull
+          
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          
           chmod a+x ./run.sh
           ./run.sh
       

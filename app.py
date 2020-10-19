@@ -1,7 +1,10 @@
 from flask import Flask
+import os
+
 
 app = Flask(__name__)
 
+TOKEN = os.environ.get('TOKEN')
 
 @app.route('/')
 def hello_world():
@@ -10,4 +13,4 @@ def hello_world():
 
 @app.route('/help')
 def hello_help():
-    return 'Hello from help1!'
+    return f'TOKEN: {TOKEN}'

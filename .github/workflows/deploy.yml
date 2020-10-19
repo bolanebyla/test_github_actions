@@ -31,7 +31,7 @@ jobs:
 
           ls -ltr
           
-          TOKEN=${{ secrets.TOKEN }}
+          export TOKEN=${{ secrets.TOKEN }}
           
           docker-compose build 
           docker-compose up -d
